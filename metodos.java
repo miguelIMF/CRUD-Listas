@@ -108,7 +108,7 @@ public class metodos {
 
 		Scanner inputTitulo = new Scanner(System.in);
 		System.out.print("[INPUT] Introduce el titulo de la pelicula: ");
-		titulo = inputTitulo.next();
+		titulo = inputTitulo.nextLine();
 
 		return titulo;
 	}
@@ -126,7 +126,7 @@ public class metodos {
 
 		Scanner inputGenero = new Scanner(System.in);
 		System.out.print("[INPUT] Introduce el genero de la pelicula: ");
-		genero = inputGenero.next();
+		genero = inputGenero.nextLine();
 
 		return genero;
 	}
@@ -258,7 +258,7 @@ public class metodos {
 				System.out.print("[INPUT] Introduce la posicicion del elemento que deseas: ");
 				posicionElemento = inputPosicion.nextInt() - 1;
 
-			} while (posicionElemento > 0 && posicionElemento < listado.size());
+			} while (posicionElemento < 0 || posicionElemento >= listado.size());
 			
 		}
 
